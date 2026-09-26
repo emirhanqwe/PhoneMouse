@@ -1,0 +1,12 @@
+{
+    "name": "Phone Mouse",
+    "short_name": "Phone Mouse",
+    "description": "Telefonu kablosuz bilgisayar faresine dönüştürür.",
+    "start_url": "./",
+    "display": "standalone",
+    "orientation": "landscape",
+    "background_color": "#0b0b0f",
+    "theme_color": "#0b0b0f",
+    "scope": "./",
+    "icons": []
+}

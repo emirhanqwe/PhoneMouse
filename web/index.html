@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0b0b0f">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <title>Phone Mouse</title>
+</head>
+<body>
+    <!-- Bağlantı Ekranı -->
+    <div id="connectScreen" class="screen">
+        <div class="card">
+            <div class="logo">🖱️</div>
+            <h1>Phone Mouse</h1>
+            <p>Bilgisayarın IP adresini gir</p>
+            <input type="text" id="ipInput" placeholder="192.168.1.100" autocomplete="off">
+            <button id="connectButton">Bağlan</button>
+            <div id="savedIps" class="savedIps hidden">
+                <div class="sectionTitle">Kayıtlı bilgisayarlar</div>
+                <div id="savedIpList"></div>
+            </div>
+            <button id="settingsButton" class="secondaryButton">⚙ Ayarlar</button>
+            <div id="status" class="status">Hazır</div>
+        </div>
+    </div>
 
+    <div id="settingsPanel" class="settingsPanel hidden">
+        <div class="card settingsCard">
+            <div class="settingsHeader">
+                <div>
+                    <div class="eyebrow">Tercihler</div>
+                    <h2>Ayarlar</h2>
+                </div>
+                <button id="closeSettingsButton" class="iconButton" aria-label="Ayarları kapat">×</button>
+            </div>
+            <label class="settingRow" for="keepScreenAwake">
+                <span>
+                    <strong>Ekranı açık tut</strong>
+                    <small>Bağlıyken telefonun uykuya geçmesini engeller.</small>
+                </span>
+                <input type="checkbox" id="keepScreenAwake" checked>
+            </label>
+            <div id="wakeLockStatus" class="settingStatus"></div>
+        </div>
+    </div>
+
+    <!-- Trackpad Ekranı -->
+    <div id="trackpadScreen" class="screen hidden">
+        <div id="trackpad"></div>
+        <div class="trackpadInfo">
+            <div id="connectionIndicator"></div>
+            <span>Bağlı</span>
+        </div>
+        <button id="keyboardButton" class="keyboardButton" aria-label="Telefon klavyesini aç">⌨ Klavye</button>
+        <div class="trackpadHint">
+            <span>Tek parmak: Hareket & Sol tık</span>
+            <span>İki parmak: Sağ tık & Kaydırma</span>
+        </div>
+    </div>
+
+    <div id="keyboardPanel" class="keyboardPanel hidden">
+        <div class="keyboardHeader">
+            <span>Bilgisayar klavyesi</span>
+            <button id="closeKeyboardButton" class="closeKeyboardButton" aria-label="Telefon klavyesini kapat">×</button>
+        </div>
+        <input
+            id="keyboardInput"
+            type="text"
+            autocomplete="off"
+            autocapitalize="sentences"
+            spellcheck="false"
+            placeholder="Yazmaya başlayın..."
+        >
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
