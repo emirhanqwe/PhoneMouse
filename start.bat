@@ -1,0 +1,3 @@
+@echo off
+echo Starting...
+python server.py
